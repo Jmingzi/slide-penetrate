@@ -52,8 +52,8 @@ export default {
 
 ## 问题
 
-1 通过babel直接编译转化为`commonjs`后的结果依旧包含`require(/Users/yangming/.../node_modules/)`，如何解决？
-2 通过webpack打包`commonjs`，始终会注入`core-js`的引入，为`156kb`，如何解决？
-3 通过`vue-cli-service build --target lib --name a.js`打包后也仍然包含`core-js`，为`60.55kb`，比webpack小
+1. 通过babel直接编译转化为`commonjs`后的结果依旧包含`require(/Users/yangming/.../node_modules/)`，如何解决？
+2. 通过webpack打包`commonjs`，始终会注入`core-js`的引入，为`156kb`，如何解决？
+3. 通过`vue-cli-service build --target lib --name a.js`打包后也仍然包含`core-js`，为`60.55kb`，比webpack小
 
 
