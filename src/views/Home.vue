@@ -45,12 +45,17 @@
 </template>
 
 <script>
-import scroll from './scroll'
+// import scroll from './scroll'
+import penetrate from '../../m-dist/penetrate-babel'
+// import penetrate from '../../m-dist/penetrate'
+
+// console.log(penetrate)
 
 export default {
   name: 'home',
 
-  mixins: [scroll],
+  // mixins: [scroll],
+  mixins: [penetrate],
 
   data() {
     return {
