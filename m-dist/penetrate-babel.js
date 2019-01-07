@@ -1,25 +1,22 @@
 (function (global, factory) {
   if (typeof define === "function" && define.amd) {
-    define(["exports", "@babel/runtime-corejs2/core-js/array/from", "core-js/modules/web.dom.iterable", "core-js/modules/es6.array.iterator", "core-js/modules/es6.promise", "core-js/modules/es7.promise.finally"], factory);
+    define(["exports", "core-js/modules/_array-from-iterable"], factory);
   } else if (typeof exports !== "undefined") {
-    factory(exports, require("@babel/runtime-corejs2/core-js/array/from"), require("core-js/modules/web.dom.iterable"), require("core-js/modules/es6.array.iterator"), require("core-js/modules/es6.promise"), require("core-js/modules/es7.promise.finally"));
+    factory(exports, require("core-js/modules/_array-from-iterable"));
   } else {
     var mod = {
       exports: {}
     };
-    factory(mod.exports, global.from, global.webDom, global.es6Array, global.es6, global.es7Promise);
+    factory(mod.exports, global._arrayFromIterable);
     global.scroll = mod.exports;
   }
-})(this, function (_exports, _from, _webDom, _es6Array, _es, _es7Promise) {
+})(this, function (_exports, _arrayFromIterable) {
   "use strict";
-
-  var _interopRequireDefault = require("/Users/yangming/Documents/github/slide-penetrate/node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault");
 
   Object.defineProperty(_exports, "__esModule", {
     value: true
   });
   _exports.default = void 0;
-  _from = _interopRequireDefault(_from);
   var event = {
     topics: [],
     add: function add(target, event, fn) {
@@ -127,7 +124,7 @@
       },
       getChildByClass: function getChildByClass(parent, childClass) {
         if (parent.childNodes && parent.childNodes.length) {
-          var childs = (0, _from.default)(parent.childNodes);
+          var childs = parent.childNodes;
 
           for (var i = 0; i < childs.length; i++) {
             if (childs[i].classList && childs[i].classList.contains(childClass)) {

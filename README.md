@@ -50,10 +50,14 @@ export default {
 }
 ```
 
-## 问题
+## 关于webpack打包的问题
 
-1 通过babel直接编译转化为`commonjs`后的结果依旧包含`require(/Users/yangming/.../node_modules/)`，如何解决？
-2 通过webpack打包`commonjs`，始终会注入`core-js`的引入，为`156kb`，如何解决？
-3 通过`vue-cli-service build --target lib --name a.js`打包后也仍然包含`core-js`，为`60.55kb`，比webpack小
+导出成`commonjs`包有2个步骤
 
+- 先将代码转成es5的风格，依赖的部分仍是`require`，因为babel不会处理模块依赖
+- 再用webpack处理依赖，也可以用[externals](https://webpack.docschina.org/configuration/externals/)字段，排除包的注入
+
+#### 总结
+
+即使我只引入了一个`Array.from`方法，也会额外注入将近20kb的依赖，这是不值得的，在一些小的包中，可以将这些作为[externals](https://webpack.docschina.org/configuration/externals/)字段选项注入。
 

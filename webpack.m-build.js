@@ -1,6 +1,14 @@
 const webpack = require('webpack')
 const path = require('path')
 
+
+//   ["@babel/plugin-transform-runtime", {
+//   "corejs": 2,
+//   "helpers": true,
+//   "regenerator": false,
+//   "useESModules": false
+// }]
+
 module.exports = {
   entry: {
     // penetrate: './m-dist/penetrate-babel.js'
@@ -20,5 +28,5 @@ module.exports = {
       }
     ]
   },
-  // devtool: '#source-map',
+  devtool: '#source-map',
 }

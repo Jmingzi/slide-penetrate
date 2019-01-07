@@ -1,3 +1,4 @@
+// import 'core-js/modules/_array-from-iterable'
 const event = {
   topics: [],
 
@@ -116,7 +117,7 @@ export default {
 
     getChildByClass(parent, childClass) {
       if (parent.childNodes && parent.childNodes.length) {
-        const childs = Array.from(parent.childNodes)
+        const childs = parent.childNodes
         for (let i = 0; i < childs.length; i++) {
           if (childs[i].classList && childs[i].classList.contains(childClass)) {
             return childs[i]
