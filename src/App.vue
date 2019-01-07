@@ -3,6 +3,12 @@
     <router-view/>
   </div>
 </template>
+
+<script>
+  import cart from '@xm/cart-redirect'
+  console.log(cart)
+</script>
+
 <style lang="stylus">
 html, body
   height 100%
