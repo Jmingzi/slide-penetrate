@@ -50,8 +50,6 @@ export default {
 }
 ```
 
-## 关于webpack打包的问题
-
 导出成`commonjs`包有2个步骤
 
 - 先将代码转成es5的风格，依赖的部分仍是`require`，因为babel不会处理模块依赖
