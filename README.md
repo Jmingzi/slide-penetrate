@@ -1,6 +1,6 @@
 ## Vue移动端滑动穿透解决方案
 
-扫码查看demo
+扫码查看demo，源码请戳：[./src/views/scroll.js](./src/views/scroll.js)
 
 <img src="./qrcode.png" width=200px>
 
