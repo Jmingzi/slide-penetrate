@@ -1,13 +1,4 @@
-const webpack = require('webpack')
 const path = require('path')
-
-
-//   ["@babel/plugin-transform-runtime", {
-//   "corejs": 2,
-//   "helpers": true,
-//   "regenerator": false,
-//   "useESModules": false
-// }]
 
 module.exports = {
   entry: {
@@ -18,7 +9,7 @@ module.exports = {
     path: path.resolve(__dirname, './m-dist'),
     filename: '[name].js',
     library: 'penetrate',
-    libraryTarget: 'commonjs'
+    libraryTarget: 'umd'
   },
   module: {
     rules: [

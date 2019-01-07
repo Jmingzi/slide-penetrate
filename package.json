@@ -1,7 +1,7 @@
 {
   "name": "vue-penetrate",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.1.1",
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name a.js src/views/scroll.js",
@@ -10,24 +10,19 @@
     "babel": "babel ./src/views/scroll.js --out-file ./m-dist/penetrate-babel.js --source-maps"
   },
   "main": "./m-dist/penetrate.js",
-  "lib": ["m-dist"],
+  "files": [
+    "m-dist"
+  ],
   "dependencies": {
-    "@babel/polyfill": "^7.2.5",
-    "@babel/runtime-corejs2": "^7.2.0",
     "vue": "^2.5.21",
+    "vue-penetrate": "^0.1.1",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.2.2",
-    "@babel/plugin-transform-runtime": "^7.2.0",
-    "@babel/preset-env": "^7.2.3",
     "@vue/cli-plugin-babel": "^3.1.0",
     "@vue/cli-service": "^3.1.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
-    "vue-template-compiler": "^2.5.21",
-    "webpack": "^4.28.3",
-    "webpack-cli": "^3.2.0"
+    "vue-template-compiler": "^2.5.21"
   }
 }

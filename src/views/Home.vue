@@ -46,10 +46,13 @@
 
 <script>
 // import scroll from './scroll'
-import penetrate from '../../m-dist/penetrate-babel'
+// import penetrate from '../../m-dist/penetrate-babel'
 // import penetrate from '../../m-dist/penetrate'
+// import penetrate from './penetrate'
+// import penetrate from '../../dist/a.js.common'
+import penetrate from 'vue-penetrate'
 
-// console.log(penetrate)
+console.log(penetrate)
 
 export default {
   name: 'home',
