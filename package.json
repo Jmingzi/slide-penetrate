@@ -4,7 +4,7 @@
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name a.js src/views/scroll.js",
+    "build": "vue-cli-service build",
     "out": "webpack --config webpack.m-build.js --mode=development --progress --debug --display-modules --sort-modules-by size",
     "out:r": "webpack --config webpack.m-build.js --mode=production --progress --debug --display-modules --sort-modules-by size",
     "babel": "babel ./src/views/scroll.js --out-file ./m-dist/penetrate-babel.js --source-maps"
