@@ -111,10 +111,6 @@ export default {
       this.startY = 0
     },
 
-    preventDefault(e) {
-      e.preventDefault()
-    },
-
     getChildByClass(parent, childClass) {
       if (parent.childNodes && parent.childNodes.length) {
         const childs = parent.childNodes
